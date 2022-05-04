@@ -5,4 +5,4 @@ function Title() {
   return <h2> Test01: React optimize performance</h2>;
 }
 
-export default Title;
+export default React.memo(Title);

@@ -9,4 +9,6 @@ function Button({ onClick, children }) {
   );
 }
 
-export default Button;
+export default React.memo(({children, onClick}) => {
+  return <Button children={children} onClick={onClick} />;
+});

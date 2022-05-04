@@ -13,15 +13,17 @@ code {
     monospace;
 }
 
-
 .test03_content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 40px;
-
+  gap: 20px 40px;
 }
 
 .card {
   margin-bottom: 12px;
+}
+.test03_content::after {
+  content: "";
+  flex: auto;
 }

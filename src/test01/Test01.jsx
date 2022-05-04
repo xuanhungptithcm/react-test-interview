@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 // components
 import Title from "./components/Title";
@@ -9,13 +9,13 @@ export default function Test01() {
   const [age, setAge] = useState(1);
   const [salary, setSalary] = useState(1000);
 
-  const incrementAge = () => {
-    setAge(age + 1);
-  };
+  const incrementAge = useCallback(() => {
+    setAge((age) => age + 1);
+  }, []);
 
-  const incrementSalary = () => {
-    setSalary(salary + 1000);
-  };
+  const incrementSalary = useCallback(() => {
+    setSalary((salary) => salary + 1000);
+  }, []);
 
   return (
     <div className="App">
