@@ -58,7 +58,7 @@ function Test03() {
         },
         {
           rootMargin: "0px 0px 0px 0px",
-          threshold: [0, 0.25, 0.5, 0.75, 1],
+          threshold: [1],
         }
       );
       lastElementRef.current.observe(el);
